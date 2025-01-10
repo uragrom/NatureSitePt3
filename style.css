@@ -1,0 +1,222 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Видео в тексте */
+.banner
+{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    owerflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.banner h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    font-size: 30vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 100vh;
+    mix-blend-mode: screen;
+
+}
+
+/* Эффект параллакса */
+.parallax {
+    background-image: url('nature-background.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+/* Основной контент */
+.content {
+    padding: 50px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 30px auto;
+    color: #555;
+}
+
+/* Галерея */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 300px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* Цитаты */
+.quotes {
+    padding: 50px;
+    text-align: center;
+}
+
+.quote-box {
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 5px solid #4caf50;
+    width: 70%;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333;
+    position: relative;
+}
+
+/* Анимация "ритм музыки" */
+.music-rhythm p {
+    display: inline-block;
+    animation: rhythm 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes rhythm {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+/* Анимация "шагающий текст" */
+.walking-text p {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.walking-text p span {
+    display: inline-block;
+    position: relative;
+    animation: walking 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes walking {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Эффект при наведении для музыки */
+.play-music p {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.play-music p:hover {
+    color: #4caf50;
+}
+
+/* Форма контакта */
+.contact-form form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Эффект выезжающих изображений */
+img.slide-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
